@@ -6,7 +6,7 @@
 #
 
 def test() -> None:
-    with open('test.txt', encoding="utf-8") as f:
+    with open("test.txt", encoding="utf-8") as f:
         lines = f.readlines()
         print("File read.")
         for line in lines:
