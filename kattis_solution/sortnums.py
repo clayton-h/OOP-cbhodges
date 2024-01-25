@@ -6,12 +6,11 @@
 #
 
 def test() -> None:
-    nums = []
     with open('test.txt', encoding="utf-8") as f:
         lines = f.readlines()
         print("File read.")
         for line in lines:
-            nums = line.strip().split()
+            nums = [int(item) for item in line.strip().split()]
             sort(nums)
 
 
