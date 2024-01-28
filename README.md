@@ -1,5 +1,5 @@
 # SS-cbhodges
-Object Oriented Programming Repo Spring 2024
+Object-Oriented Programming Repo Spring 2024
 
 ## Assignments:
 
@@ -11,6 +11,6 @@ Object Oriented Programming Repo Spring 2024
 | Description: | Setup Docker and Container and GitHubbing and Git Best Practices |
 | Due Date: | 2/1/24 |
 | Status: | Complete |
-| Location: | ~ |
+| Location: | https://github.com/clayton-h/OOP-cbhodges/tree/main |
 | Self Grade: | 100/100 |
-| Notes: | all tasks in completed as outlined in the Word document |
+| Notes: | All tasks completed as outlined in the Word document |
