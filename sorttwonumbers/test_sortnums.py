@@ -5,7 +5,7 @@
 # By: Clayton H.
 #
 
-import sorttwonumbers.sort as sort
+import sorttwonumbers.sorttwonnumbers as sort
 import unittest
 
 
