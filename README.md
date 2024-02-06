@@ -11,6 +11,18 @@ Object-Oriented Programming Repo Spring 2024
 | Description: | Setup Docker and Container and GitHubbing and Git Best Practices |
 | Due Date: | 2/1/24 |
 | Status: | Complete |
-| Location: | https://github.com/clayton-h/OOP-cbhodges/tree/main |
+| Location: | [https://github.com/clayton-h/OOP-cbhodges/tree/main](https://github.com/clayton-h/OOP-cbhodges/tree/main/sorttwonumbers) |
+| Self Grade: | 100/100 |
+| Notes: | All tasks completed as outlined in the Word document |
+
+### Assignment #1
+
+| Category: | Value: |
+| --- | --- |
+| Name: | Python Fundamentals |
+| Description: | Review Python Fundamentals and Take Online Quizzes |
+| Due Date: | 2/13/24 |
+| Status: | Complete |
+| Location: | [https://github.com/clayton-h/OOP-cbhodges/tree/main](https://github.com/clayton-h/OOP-cbhodges/tree/main/A1-review) |
 | Self Grade: | 100/100 |
 | Notes: | All tasks completed as outlined in the Word document |
