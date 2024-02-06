@@ -6,6 +6,7 @@ STYLE_FIX = autopep8 --in-place --recursive --aggressive --aggressive
 
 .PHONY: all
 all: style-check type-check run-test clean
+	@echo -e "\nAll checks passed"
 
 .PHONY: type-check
 type-check:
