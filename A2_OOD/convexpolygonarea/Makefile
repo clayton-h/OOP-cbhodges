@@ -7,6 +7,10 @@ STYLE_FIX = autopep8 --in-place --recursive --aggressive --aggressive
 .PHONY: all
 all: style-check type-check run-test clean
 
+.PHONY: run
+run: 
+	python convexpolygonarea.py
+
 .PHONY: type-check
 type-check:
 	$(TYPE_CHECK) .

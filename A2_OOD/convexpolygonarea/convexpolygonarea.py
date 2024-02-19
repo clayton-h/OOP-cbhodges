@@ -12,7 +12,7 @@ class Polygon:
     given a list of tuples (x, y)
     """
 
-    def __init__(self, coords: list, numverts: int) -> None:
+    def __init__(self, coords: list[tuple[int, int]], numverts: int) -> None:
         self.coords = coords
         self.numverts = numverts
 
@@ -37,23 +37,18 @@ def main() -> None:
     user input for polygon creation
     """
     polygons = []
-    coords = []
-    print("Enter # complex polygons: ")
-    numpoly = int(input())
-    for i in range(numpoly):
-        print("Enter # vertices: ")
-        numverts = int(input())
-        for j in range(numverts):
-            print("Enter coords: ")
-            x = int(input())
-            y = int(input())
-            coords.append((x, y))
-            polygons.append(Polygon(coords, numverts))
+    numpoly = int(input())  # Enter the number of polygons.
+    for _ in range(numpoly):
+        vertices = input().split()  # Enter vertices (#vertices x1 y1 ...)
+        numverts = int(vertices[0])
+        coords = [(int(vertices[i]), int(vertices[i + 1]))
+                  for i in range(1, len(vertices), 2)]
+        polygons.append(Polygon(coords, numverts))
 
     # Calculate and print the area of each polygon
     for i, polygon in enumerate(polygons):
         area = polygon.calc_area()
-        print(f"Area of polygon {i + 1}: {area}")
+        print(f"{str(area).rstrip('0').rstrip('.')}")
 
 
 if __name__ == "__main__":
