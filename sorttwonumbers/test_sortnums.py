@@ -5,8 +5,8 @@
 # By: Clayton H.
 #
 
-import sorttwonumbers.sorttwonums as sortnums
 import unittest
+import sorttwonumbers.sorttwonums as sortnums
 
 
 class TestFunctions(unittest.TestCase):
