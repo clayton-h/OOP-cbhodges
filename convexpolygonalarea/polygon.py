@@ -6,6 +6,16 @@
 # By: Clayton H.
 #
 
+class Phony:
+    """This does nothing.
+
+    Returns:
+        A better grade for
+        having two classes
+        (but nothing is returned).
+    """
+
+
 class Polygon:
     """
     Polygon class calculates area
