@@ -26,7 +26,7 @@ class TestPolygon(unittest.TestCase):
     def test_area_pentagon(self) -> None:
         coords = [(0, 0), (2, 0), (3, 2), (1, 3), (-1, 2)]
         polygon = Polygon(coords, 5)
-        expected_area = 5.0
+        expected_area = 8.0
         self.assertEqual(polygon.set_area(), expected_area)
 
 
