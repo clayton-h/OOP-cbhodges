@@ -6,7 +6,7 @@
 # By: Clayton H.
 #
 
-from convexpolygonalarea.user_input import print_polygon
+from convexpolygonalarea.run import print_polygon
 
 
 def main() -> None:
