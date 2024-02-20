@@ -16,7 +16,7 @@ class Polygon:
         self.coords = coords
         self.numverts = numverts
 
-    def calc_area(self) -> float:
+    def set_area(self) -> float:
         """This function calculates
         polygon area using
         the Shoelace Formula
@@ -47,7 +47,7 @@ def main() -> None:
 
     # Calculate and print the area of each polygon
     for i, polygon in enumerate(polygons):
-        area = polygon.calc_area()
+        area = polygon.set_area()
         print(f"{str(area).rstrip('0').rstrip('.')}")
 
 
