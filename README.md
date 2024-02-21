@@ -3,6 +3,18 @@ Object-Oriented Programming Repo Spring 2024
 
 ## Assignments:
 
+### Assignment #2
+
+| Category: | Value: |
+| --- | --- |
+| Name: | OOP – Class and Objects |
+| Description: | Class and Object-Oriented Design |
+| Due Date: | 2/27/24 |
+| Status: | Complete |
+| Location: | [[https://github.com/clayton-h/OOP-cbhodges/tree/main](https://github.com/clayton-h/OOP-cbhodges/tree/main/A1-review)](https://github.com/clayton-h/OOP-cbhodges/tree/main/A2-OOD/convexpolygonalarea) |
+| Self Grade: | 100/100 |
+| Notes: | All tasks completed as outlined in the Word document |
+
 ### Assignment #1
 
 | Category: | Value: |
@@ -23,6 +35,6 @@ Object-Oriented Programming Repo Spring 2024
 | Description: | Setup Docker and Container and GitHubbing and Git Best Practices |
 | Due Date: | 2/1/24 |
 | Status: | Complete |
-| Location: | [https://github.com/clayton-h/OOP-cbhodges/tree/main](https://github.com/clayton-h/OOP-cbhodges/tree/main/sorttwonumbers) |
+| Location: | [[https://github.com/clayton-h/OOP-cbhodges/tree/main](https://github.com/clayton-h/OOP-cbhodges/tree/main/sorttwonumbers)](https://github.com/clayton-h/OOP-cbhodges/tree/main/A0-github/sorttwonumbers) |
 | Self Grade: | 100/100 |
 | Notes: | All tasks completed as outlined in the Word document |
