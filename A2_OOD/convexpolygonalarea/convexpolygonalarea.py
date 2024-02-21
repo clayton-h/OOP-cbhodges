@@ -6,16 +6,7 @@
 # By: Clayton H.
 #
 
-import importlib
-
-# Construct the module name with the hyphen
-MODULE_NAME = 'A2-OOD.convexpolygonalarea.run'
-
-# Import the module dynamically
-run_module = importlib.import_module(MODULE_NAME.replace('-', '_'))
-
-# Access the print_polygon function
-print_polygon = run_module.print_polygon
+from A2_OOD.convexpolygonalarea.run import print_polygon
 
 
 def main() -> None:
