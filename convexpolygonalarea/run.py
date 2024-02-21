@@ -24,5 +24,5 @@ def print_polygon() -> None:
 
     # Calculate and print the area of each polygon
     for i, polygon in enumerate(polygons):
-        area = polygon.set_area()
+        area = polygon.calc_area()
         print(f"{str(area).rstrip('0').rstrip('.')}")

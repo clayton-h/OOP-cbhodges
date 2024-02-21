@@ -10,7 +10,7 @@ class Phony:
     """This does nothing.
     Since I store the points
     as tuples, I don't
-    need a class to create 
+    need a class to create
     objects for them.
 
     Returns:
