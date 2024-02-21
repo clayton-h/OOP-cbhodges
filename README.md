@@ -11,7 +11,7 @@ Object-Oriented Programming Repo Spring 2024
 | Description: | Class and Object-Oriented Design |
 | Due Date: | 2/27/24 |
 | Status: | Complete |
-| Location: | (https://github.com/clayton-h/OOP-cbhodges/tree/main/A1-review)](https://github.com/clayton-h/OOP-cbhodges/tree/main/A2-OOD/convexpolygonalarea) |
+| Location: | (https://github.com/clayton-h/OOP-cbhodges/tree/main/A2-OOD/convexpolygonalarea) |
 | Self Grade: | 100/100 |
 | Notes: | All tasks completed as outlined in the Word document |
 
