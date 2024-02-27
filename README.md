@@ -3,6 +3,18 @@ Object-Oriented Programming Repo Spring 2024
 
 ## Assignments:
 
+### Assignment #3
+
+| Category: | Value: |
+| --- | --- |
+| Name: | OOP – OOD and Unit Testing |
+| Description: | Unit testing Object-Oriented Programs |
+| Due Date: | 3/7/24 |
+| Status: | ~ |
+| Location: | ~ |
+| Self Grade: | ~/100 |
+| Notes: | All tasks ~ as outlined in the Word document |
+
 ### Assignment #2
 
 | Category: | Value: |
