@@ -12,7 +12,7 @@ from is_palindrome import is_morse_pal
 def main() -> None:
     """Main program
     """
-    is_morse_pal(input())
+    print(is_morse_pal(input()))
 
 
 if __name__ == "__main__":

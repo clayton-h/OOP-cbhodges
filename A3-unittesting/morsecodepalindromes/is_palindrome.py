@@ -9,7 +9,7 @@
 from encode import encrypt
 
 
-def is_morse_pal(s: str) -> None:
+def is_morse_pal(s: str) -> int:
     """This function checks if the inputted string
     is a palindrome.
 
@@ -21,6 +21,8 @@ def is_morse_pal(s: str) -> None:
         or returns 0 if not morse code palindrome
     """
     cipher = encrypt(s)
-    print(cipher)
+    # print(cipher)
     if (cipher):
-        print(int(cipher == cipher[::-1]))
+        return int(cipher == cipher[::-1])
+    else:
+        raise TypeError('Morse cipher unsuccessful!')

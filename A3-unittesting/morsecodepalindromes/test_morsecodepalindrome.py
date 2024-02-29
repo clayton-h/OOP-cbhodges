@@ -7,6 +7,7 @@
 #
 
 import unittest
+from is_palindrome import is_morse_pal
 
 
 class TestMorse(unittest.TestCase):
@@ -20,7 +21,12 @@ class TestMorse(unittest.TestCase):
     def test_1(self) -> None:
         """test 1
         """
-        print("test1")
+        assert (is_morse_pal('$%@#hello') == 0)
+
+    def test_2(self) -> None:
+        """test 2
+        """
+        assert (is_morse_pal('$%@#hello') == 0)
 
 
 if __name__ == "__main__":
