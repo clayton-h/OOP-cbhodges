@@ -10,10 +10,10 @@ Object-Oriented Programming Repo Spring 2024
 | Name: | OOP – OOD and Unit Testing |
 | Description: | Unit testing Object-Oriented Programs |
 | Due Date: | 3/7/24 |
-| Status: | ~ |
-| Location: | ~ |
-| Self Grade: | ~/100 |
-| Notes: | All tasks ~ as outlined in the Word document |
+| Status: | Complete |
+| Location: | (https://github.com/clayton-h/OOP-cbhodges/tree/main/A3_unittesting) |
+| Self Grade: | 100/100 |
+| Notes: | All tasks completed as outlined in the Word document |
 
 ### Assignment #2
 
