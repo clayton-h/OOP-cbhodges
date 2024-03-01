@@ -6,7 +6,7 @@
 #
 
 import unittest
-import sorttwonumbers.sorttwonums as sortnums
+import A0_github.sorttwonums as sortnums
 
 
 class TestFunctions(unittest.TestCase):
