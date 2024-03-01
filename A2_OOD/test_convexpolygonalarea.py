@@ -7,7 +7,7 @@
 #
 
 import unittest
-from A2_OOD.convexpolygonalarea.polygon import Polygon
+from A2_OOD.polygon import Polygon
 
 
 class TestPolygon(unittest.TestCase):

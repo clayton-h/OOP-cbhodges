@@ -5,7 +5,7 @@
 # By: Clayton H.
 #
 
-from convexpolygonalarea.polygon import Polygon
+from A2_OOD.polygon import Polygon
 
 
 def print_polygon() -> None:

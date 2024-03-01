@@ -6,7 +6,8 @@
 # By: Clayton H.
 #
 
-from is_palindrome import MorsePalindromeChecker
+from A3_unittesting.morsecodepalindromes.palindrome import \
+    MorsePalindromeChecker
 
 
 def main() -> None:
