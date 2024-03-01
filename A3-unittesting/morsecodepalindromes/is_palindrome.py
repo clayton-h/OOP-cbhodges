@@ -13,11 +13,11 @@ class MorsePalindromeChecker:
     """Morse code palindrome checker class.
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         self._translator = MorseCodeTranslator()
 
     @property
-    def translator(self):
+    def translator(self) -> MorseCodeTranslator:
         """Translation getter.
 
         Returns:
@@ -26,7 +26,7 @@ class MorsePalindromeChecker:
         return self._translator
 
     @translator.setter
-    def translator(self, new_translator):
+    def translator(self, new_translator: MorseCodeTranslator) -> None:
         """Translation setter.
 
         Args:

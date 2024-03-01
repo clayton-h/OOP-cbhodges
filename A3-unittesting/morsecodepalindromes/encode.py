@@ -13,7 +13,7 @@ class MorseCodeTranslator:
         _type_: string (morse code)
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         # Dictionary representing the morse code chart
         self._morse_code_dict = {'A': '.-', 'B': '-...',
                                  'C': '-.-.', 'D': '-..', 'E': '.',
@@ -32,7 +32,7 @@ class MorseCodeTranslator:
                                  '(': '-.--.', ')': '-.--.-'}
 
     @property
-    def morse_code_dict(self):
+    def morse_code_dict(self) -> dict[str, str]:
         """Getter for morse code dictionary.
 
         Returns:
@@ -41,7 +41,7 @@ class MorseCodeTranslator:
         return self._morse_code_dict
 
     @morse_code_dict.setter
-    def morse_code_dict(self, new_dict):
+    def morse_code_dict(self, new_dict: dict[str, str]) -> None:
         """Morse code dictionary setter.
 
         Args:

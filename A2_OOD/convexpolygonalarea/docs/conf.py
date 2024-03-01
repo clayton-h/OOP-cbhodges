@@ -8,7 +8,8 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../'))  # Adjust the path to your project root
+# Adjust the path to your project root
+sys.path.insert(0, os.path.abspath('../'))
 
 project = 'convexpolygonalarea'
 copyright = '2024, Clayton Hodges'
@@ -24,7 +25,6 @@ extensions = [
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
 
 
 # -- Options for HTML output -------------------------------------------------
