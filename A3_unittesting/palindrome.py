@@ -6,7 +6,7 @@
 # By: Clayton H.
 #
 
-from morsecodepalindromes.encode import MorseCodeTranslator
+from A3_unittesting.encode import MorseCodeTranslator
 
 
 class MorsePalindromeChecker:
