@@ -1,37 +1,34 @@
-#
-# Python script that tests
-# polygon object creation
-# and area calculation
-#
-# By: Clayton H.
-#
-
 import unittest
-from is_palindrome import is_morse_pal
+from hypothesis import given, strategies as st
+from is_palindrome import MorsePalindromeChecker
+from encode import MorseCodeTranslator
 
 
 class TestMorse(unittest.TestCase):
-    """Class containing morse code
-    palindrome test functions.
+    """Unittest class for hypothesis morse code
+     palindrome testing
 
     Args:
-        unittest (_type_): _description_
+        Morse code palindrome checker self pointer
     """
 
-    def test_1(self) -> None:
-        """test 1
-        """
-        assert (is_morse_pal('$hello') == 0)
+    @given(st.text())
+    def test_morse_palindrome_hypothesis(self, s):
+        """Test Morse code palindromes with Hypothesis-generated strings."""
+        checker = MorsePalindromeChecker()
+        translator = MorseCodeTranslator()
+        result = checker.is_morse_palindrome(s)
+        self.assertIn(result, [0, 1])
+        if result == 1:
+            morse_code = translator.encrypt(s)
+            self.assertEqual(morse_code, morse_code[::-1])
 
-    def test_2(self) -> None:
-        """test 2
-        """
-        assert (is_morse_pal('Madam I\'m Adam') == 0)
-
-    def test_3(self) -> None:
-        """test 3
-        """
-        assert (is_morse_pal('159') == 1)
+    def test_morse_palindrome_known_cases(self):
+        """Test Morse code palindromes with known cases."""
+        checker = MorsePalindromeChecker()
+        self.assertEqual(checker.is_morse_palindrome('159'), 1)
+        self.assertEqual(checker.is_morse_palindrome('$hello'), 0)
+        self.assertEqual(checker.is_morse_palindrome('Madam I\'m Adam'), 0)
 
 
 if __name__ == "__main__":
