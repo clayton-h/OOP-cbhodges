@@ -3,10 +3,15 @@ TEST_ARGS = --verbose --color=yes
 TYPE_CHECK = mypy --strict --allow-untyped-decorators --ignore-missing-imports
 STYLE_CHECK = flake8
 STYLE_FIX = autopep8 --in-place --recursive --aggressive --aggressive
+COVERAGE_CHECK = pytest --cov=. --cov-report=html
 
 .PHONY: all
 all: style-check type-check run-test clean
 	@echo -e "\nAll checks passed\n"
+
+.PHONY: coverage-test
+coverage-test:
+	$(COVERAGE_CHECK)
 
 .PHONY: type-check
 type-check:

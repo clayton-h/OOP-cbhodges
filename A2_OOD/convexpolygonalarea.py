@@ -6,7 +6,7 @@
 # By: Clayton H.
 #
 
-from A2_OOD.convexpolygonalarea.run import print_polygon
+from A2_OOD.run import print_polygon
 
 
 def main() -> None:
