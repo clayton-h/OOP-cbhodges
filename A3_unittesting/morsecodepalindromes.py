@@ -6,7 +6,7 @@
 # By: Clayton H.
 #
 
-from A3_unittesting.morsecodepalindromes.palindrome import \
+from A3_unittesting.palindrome import \
     MorsePalindromeChecker
 
 
