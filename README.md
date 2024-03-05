@@ -3,6 +3,18 @@ Object-Oriented Programming Repo Spring 2024
 
 ## Assignments:
 
+### Assignment #4
+
+| Category: | Value: |
+| --- | --- |
+| Name: | OOP – hypothesis and mocking |
+| Description: | Property-based testing and Mocking Object-Oriented Program |
+| Due Date: | 3/19/24 |
+| Status: | ~ |
+| Location: | ~ |
+| Self Grade: | ~/100 |
+| Notes: | All tasks ~ as outlined in the Word document |
+
 ### Assignment #3
 
 | Category: | Value: |
