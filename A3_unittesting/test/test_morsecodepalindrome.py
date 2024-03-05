@@ -1,6 +1,6 @@
 import unittest
 from hypothesis import given, settings, strategies as st
-from A3_unittesting.palindrome import MorsePalindromeChecker
+from A3_unittesting.test.palindrome import MorsePalindromeChecker
 
 
 class TestMorse(unittest.TestCase):
