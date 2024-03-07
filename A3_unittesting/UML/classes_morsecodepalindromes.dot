@@ -1,7 +1,0 @@
-digraph "classes_morsecodepalindromes" {
-rankdir=BT
-charset="utf-8"
-"morsecodepalindromes.encode.MorseCodeTranslator" [color="black", fontcolor="black", label=<{MorseCodeTranslator|morse_code_dict<br ALIGN="LEFT"/>|encrypt(s: str): str<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
-"morsecodepalindromes.is_palindrome.MorsePalindromeChecker" [color="black", fontcolor="black", label=<{MorsePalindromeChecker|translator<br ALIGN="LEFT"/>|is_morse_palindrome(s: str): int<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
-"morsecodepalindromes.test_morsecodepalindrome.TestMorse" [color="black", fontcolor="black", label=<{TestMorse|<br ALIGN="LEFT"/>|test_morse_palindrome_known_cases(): None<br ALIGN="LEFT"/>test_morse_palindrome_random_cases(s: str): None<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
-}
