@@ -1,7 +1,0 @@
-digraph "classes_MyProject" {
-rankdir=BT
-charset="utf-8"
-"A2_OOD.convexpolygonalarea.polygon.Phony" [color="black", fontcolor="black", label=<{Phony|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
-"A2_OOD.convexpolygonalarea.polygon.Polygon" [color="black", fontcolor="black", label=<{Polygon|coords<br ALIGN="LEFT"/>numverts<br ALIGN="LEFT"/>|calc_area(): float<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
-"A2_OOD.convexpolygonalarea.test_convexpolygonalarea.TestPolygon" [color="black", fontcolor="black", label=<{TestPolygon|<br ALIGN="LEFT"/>|test_area_pentagon(): None<br ALIGN="LEFT"/>test_area_square(): None<br ALIGN="LEFT"/>test_area_triangle(): None<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
-}
