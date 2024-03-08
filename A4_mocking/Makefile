@@ -5,7 +5,7 @@ STYLE_CHECK = flake8
 STYLE_FIX = autopep8 --in-place --recursive --aggressive --aggressive
 COVERAGE_CHECK = pytest --cov=. --cov-report=html
 GENERATE_UML = pyreverse -o png --colorized ../
-GENERATE_HTML = pdoc --html --output-dir docs --show-all-variables .
+GENERATE_HTML = pdoc --html --output-dir docs .
 
 .PHONY: all
 all: style-check type-check run-test clean
