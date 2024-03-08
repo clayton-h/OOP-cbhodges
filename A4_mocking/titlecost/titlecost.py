@@ -6,7 +6,7 @@
 # By: Clayton H.
 #
 
-from modules.calculate import CostCalculator
+from .modules.calculate import CostCalculator
 
 
 def main() -> None:

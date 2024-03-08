@@ -8,7 +8,7 @@
 import unittest
 from unittest.mock import patch
 from hypothesis import given, settings, strategies as st
-from titlecost.modules.calculate import CostCalculator
+from A4_mocking.titlecost.modules.calculate import CostCalculator
 
 
 class TestCostCalculator(unittest.TestCase):
