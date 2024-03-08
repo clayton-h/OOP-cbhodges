@@ -4,10 +4,20 @@ TYPE_CHECK = mypy --strict --allow-untyped-decorators --ignore-missing-imports
 STYLE_CHECK = flake8
 STYLE_FIX = autopep8 --in-place --recursive --aggressive --aggressive
 COVERAGE_CHECK = pytest --cov=. --cov-report=html
+GENERATE_UML = pyreverse -o png --colorized ../
+GENERATE_HTML = sphinx-quickstart
 
 .PHONY: all
 all: style-check type-check run-test clean
 	@echo -e "\nAll checks passed\n"
+
+.PHONY:generate-html
+generate-html:
+	$(GENERATE_HTML)
+
+.PHONY: generate-uml
+generate-uml:
+	$(GENERATE_UML)
 
 .PHONY: coverage-test
 coverage-test:
