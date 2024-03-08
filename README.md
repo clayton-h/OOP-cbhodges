@@ -10,10 +10,10 @@ Object-Oriented Programming Repo Spring 2024
 | Name: | OOP – hypothesis and mocking |
 | Description: | Property-based testing and Mocking Object-Oriented Program |
 | Due Date: | 3/19/24 |
-| Status: | ~ |
-| Location: | ~ |
-| Self Grade: | ~/100 |
-| Notes: | All tasks ~ as outlined in the Word document |
+| Status: | Complete |
+| Location: | (https://github.com/clayton-h/OOP-cbhodges/tree/main/A4_mocking) |
+| Self Grade: | 100/100 |
+| Notes: | All tasks completed as outlined in the Word document |
 
 ### Assignment #3
 
