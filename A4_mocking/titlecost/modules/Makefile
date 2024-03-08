@@ -5,7 +5,10 @@ STYLE_CHECK = flake8
 STYLE_FIX = autopep8 --in-place --recursive --aggressive --aggressive
 COVERAGE_CHECK = pytest --cov=. --cov-report=html
 GENERATE_UML = pyreverse -o png --colorized ../
-GENERATE_HTML = sphinx-quickstart
+SPHINX = sphinx-quickstart
+SPHINX_DOCUMENT = sphinx-apidoc -o . ..
+SPHINX_MAKE = make html
+GENERATE_HTML = $(SPHINX) $(SPHINX_DOCUMENT) $(SPHINX_MAKE)
 
 .PHONY: all
 all: style-check type-check run-test clean
