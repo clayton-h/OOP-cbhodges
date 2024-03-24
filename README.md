@@ -3,6 +3,18 @@ Object-Oriented Programming Repo Spring 2024
 
 ## Assignments:
 
+### Assignment #5
+
+| Category: | Value: |
+| --- | --- |
+| Name: | OOP – Object Serialization and JSO |
+| Description: | Weather APP - JSON API |
+| Due Date: | 3/30/24 |
+| Status: | ~ |
+| Location: | (~) |
+| Self Grade: | ~/100 |
+| Notes: | All tasks ~ as outlined in the Word document |
+
 ### Assignment #4
 
 | Category: | Value: |
