@@ -49,7 +49,7 @@ class APIHandler:
         """
         return self.__access_key
 
-    def set_unit(self, unit):
+    def set_unit(self, unit: chr):
         """Sets the temperature unit ('m' for Celsius, 'f' for Fahrenheit,\
               's' for Kelvin)."""
         if unit in ['m', 'f', 's']:
@@ -58,6 +58,14 @@ class APIHandler:
             print(
                 "Invalid unit. Please use 'm' for Celsius, 'f' for Fahrenheit,\
                       or 's' for Kelvin.")
+
+    def get_unit(self):
+        """Returns the temperature unit
+
+        Returns:
+            char: 'm' for Metric, 'f' for Fahrenheit, 's' for Scientific)
+        """
+        return self.__params['units']
 
     def set_query(self, query: str):
         """Sets the query in the params dictionary.

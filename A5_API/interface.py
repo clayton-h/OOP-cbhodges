@@ -8,7 +8,8 @@ def main():
     handler = APIHandler('67f41d5ce09b4b044d298ca005ecf791')
 
     user_query = Prompt.ask(
-        "Enter your query (city name)", default="Colorado Springs")
+        "Enter your location (city name, zip code, LatLon, IP)",
+        default="Colorado Springs")
     user_unit = Prompt.ask(
         "Enter your preferred unit format (m: ℃ , f: ℉ , s: K)",
         default='f')
