@@ -9,7 +9,11 @@ def main():
 
     user_query = Prompt.ask(
         "Enter your query (city name)", default="Colorado Springs")
+    user_unit = Prompt.ask(
+        "Enter your preferred unit format (m: ℃ , f: ℉ , s: K)",
+        default='f')
     handler.set_query(user_query)
+    handler.set_unit(user_unit)
 
     console.log("[bold green]Fetching weather data...[/bold green]")
     handler.get_data()

@@ -30,7 +30,7 @@ class APIHandler:
             api_key (str): The API key for accessing the weather data.
         """
         self.__params = {
-            'access_key': access_key
+            'access_key': access_key,
         }
 
     def set_access_key(self, access_key: str):
@@ -48,6 +48,16 @@ class APIHandler:
             str: API key
         """
         return self.__access_key
+
+    def set_unit(self, unit):
+        """Sets the temperature unit ('m' for Celsius, 'f' for Fahrenheit,\
+              's' for Kelvin)."""
+        if unit in ['m', 'f', 's']:
+            self.__params['units'] = unit
+        else:
+            print(
+                "Invalid unit. Please use 'm' for Celsius, 'f' for Fahrenheit,\
+                      or 's' for Kelvin.")
 
     def set_query(self, query: str):
         """Sets the query in the params dictionary.
@@ -78,9 +88,15 @@ class APIHandler:
                 location = api_response['location'].get('name')
                 temperature = api_response['current'].get('temperature')
 
+                if self.__params['units'] == 's':
+                    unit = 'K'
+                else:
+                    unit = '℃' if self.__params['units'] == 'm' else '℉'
+
                 if location and temperature is not None:
                     print(
-                        f'Current temperature in {location} is {temperature}℃'
+                        'Current temperature in '
+                        f'{location} is {temperature}{unit}'
                     )
                 else:
                     print('Error: Temperature or location data is missing.')
