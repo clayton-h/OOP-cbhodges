@@ -33,7 +33,7 @@ class APIHandler:
             'access_key': access_key,
         }
 
-    def set_access_key(self, access_key: str):
+    def set_access_key(self, access_key: str) -> None:
         """Sets the API key.
 
         Args:
@@ -41,7 +41,7 @@ class APIHandler:
         """
         self.__access_key = access_key
 
-    def get_access_key(self):
+    def get_access_key(self) -> str:
         """Returns the access key.
 
         Returns:
@@ -49,7 +49,7 @@ class APIHandler:
         """
         return self.__access_key
 
-    def set_unit(self, unit: chr):
+    def set_unit(self, unit: str) -> None:
         """Sets the temperature unit ('m' for Celsius, 'f' for Fahrenheit,\
               's' for Kelvin)."""
         if unit in ['m', 'f', 's']:
@@ -59,7 +59,7 @@ class APIHandler:
                 "Invalid unit. Please use 'm' for Celsius, 'f' for Fahrenheit,\
                       or 's' for Kelvin.")
 
-    def get_unit(self):
+    def get_unit(self) -> str:
         """Returns the temperature unit
 
         Returns:
@@ -67,7 +67,7 @@ class APIHandler:
         """
         return self.__params['units']
 
-    def set_query(self, query: str):
+    def set_query(self, query: str) -> None:
         """Sets the query in the params dictionary.
 
         Args:
@@ -75,7 +75,7 @@ class APIHandler:
         """
         self.__params['query'] = query
 
-    def get_query(self):
+    def get_query(self) -> str:
         """Returns the query in the params dictionary.
 
         Returns:
@@ -83,7 +83,7 @@ class APIHandler:
         """
         return self.__params['query']
 
-    def get_data(self):
+    def get_data(self) -> None:
         """Returns weather data for a query."""
         api_result = requests.get(
             'http://api.weatherstack.com/current', self.__params)

@@ -3,7 +3,7 @@ from rich.console import Console
 from rich.prompt import Prompt
 
 
-def main():
+def main() -> None:
     console = Console()
     handler = APIHandler('67f41d5ce09b4b044d298ca005ecf791')
 
