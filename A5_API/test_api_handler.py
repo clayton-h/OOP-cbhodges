@@ -1,6 +1,7 @@
 #
 # Python script that tests
-# the weather app modules.
+# the weather app api_handler
+# module.
 #
 # By: Clayton H.
 #
@@ -21,9 +22,9 @@ class TestAPIHandler(unittest.TestCase):
         test_api.set_query('81501')
         self.assertEqual(test_api.get_query(), '81501')
 
-    query_library = st.one_of(
-        st.text(min_size=1, max_size=20),
-    )
+    # query_library = st.one_of(
+    #     st.text(min_size=1, max_size=20),
+    # )
 
     # @given(query_library)
     # @settings(max_examples=1)  # Limit the number of random examples
