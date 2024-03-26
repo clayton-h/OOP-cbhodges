@@ -39,7 +39,7 @@ class APIHandler:
         Args:
             access_key (str): API key for weather data.
         """
-        self.__access_key = access_key
+        self.__params['access_key'] = access_key
 
     def get_access_key(self) -> str:
         """Returns the access key.
@@ -47,7 +47,7 @@ class APIHandler:
         Returns:
             str: API key
         """
-        return self.__access_key
+        return self.__params['access_key']
 
     def set_unit(self, unit: str) -> None:
         """Sets the temperature unit ('m' for Celsius, 'f' for Fahrenheit,\
@@ -86,7 +86,7 @@ class APIHandler:
     def get_data(self) -> None:
         """Returns weather data for a query."""
         api_result = requests.get(
-            'http://api.weatherstack.com/current', self.__params)
+            'http://api.weatherstack.com/current', self.__params, timeout=10)
 
         if api_result.status_code == 200:
             api_response = api_result.json()
