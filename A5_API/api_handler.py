@@ -39,7 +39,7 @@ class APIHandler:
         Args:
             access_key (str): API key for weather data.
         """
-        self.__access_key = access_key
+        self.__params['access_key'] = access_key
 
     def get_access_key(self) -> str:
         """Returns the access key.
@@ -47,7 +47,7 @@ class APIHandler:
         Returns:
             str: API key
         """
-        return self.__access_key
+        return self.__params['access_key']
 
     def set_unit(self, unit: str) -> None:
         """Sets the temperature unit ('m' for Celsius, 'f' for Fahrenheit,\
@@ -83,35 +83,33 @@ class APIHandler:
         """
         return self.__params['query']
 
-    def get_data(self) -> None:
+    def get_data(self) -> str:
         """Returns weather data for a query."""
         api_result = requests.get(
-            'http://api.weatherstack.com/current', self.__params)
+            'http://api.weatherstack.com/current', self.__params, timeout=10)
 
         if api_result.status_code == 200:
             api_response = api_result.json()
-
-            # Check if the expected keys are present in the response
-            if 'location' in api_response and 'current' in api_response:
-                location = api_response['location'].get('name')
-                temperature = api_response['current'].get('temperature')
-
-                if self.__params['units'] == 's':
-                    unit = 'K'
-                else:
-                    unit = '℃' if self.__params['units'] == 'm' else '℉'
-
-                if location and temperature is not None:
-                    print(
-                        'Current temperature in '
-                        f'{location} is {temperature}{unit}'
-                    )
-                else:
-                    print('Error: Temperature or location data is missing.')
-            else:
-                print('Error: Invalid API response structure.')
         else:
-            print(
-                'Error: Failed to fetch data from the API.\n'
-                f'Status code: {api_result.status_code}'
-            )
+            raise ValueError("API response is missing.")
+
+        # Check if the expected keys are present in the response
+        if 'location' in api_response and 'current' in api_response:
+            location = api_response['location'].get('name')
+            temperature = api_response['current'].get('temperature')
+        else:
+            raise ValueError("API response keys not found.")
+
+        if self.__params['units'] == 's':
+            unit = 'K'
+        else:
+            unit = '℃' if self.__params['units'] == 'm' else '℉'
+
+        if location is None or temperature is None:
+            raise ValueError(
+                "Location or temperature data is missing.")
+
+        return (
+            'Current temperature in '
+            f'{location} is {temperature}{unit}'
+        )
