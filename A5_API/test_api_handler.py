@@ -1,18 +1,8 @@
 import unittest
-# import configparser
 from api_handler import APIHandler
 from hypothesis import given, settings, strategies as st
 from typing import Callable, Any
 from hypothesis.strategies import SearchStrategy
-
-# # Create a ConfigParser object
-# config = configparser.ConfigParser()
-
-# # Read the config file
-# config.read('config.ini')
-
-# # Access the API key
-# api_key = config['DEFAULT']['WeatherAPIKey']
 
 
 @st.composite

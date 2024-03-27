@@ -1,19 +1,6 @@
 from api_handler import APIHandler
 from rich.console import Console
 from rich.prompt import Prompt
-# import configparser
-
-# # Create a ConfigParser object
-# config = configparser.ConfigParser()
-
-# # Read the config file
-# config.read('config.ini')
-
-# # Print out the contents of the config object
-# print("Contents of config object:", dict(config))
-
-# # Access the API key
-# api_key = config['DEFAULT']['WeatherAPIKey']
 
 
 def main() -> None:
