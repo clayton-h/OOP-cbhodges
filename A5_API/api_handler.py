@@ -91,24 +91,23 @@ class APIHandler:
         if api_result.status_code == 200:
             api_response = api_result.json()
 
-            # Check if the expected keys are present in the response
-            if 'location' in api_response and 'current' in api_response:
-                location = api_response['location'].get('name')
-                temperature = api_response['current'].get('temperature')
-
-                if self.__params['units'] == 's':
-                    unit = 'K'
-                else:
-                    unit = '℃' if self.__params['units'] == 'm' else '℉'
-
-                if location and temperature is not None:
-                    return (
-                        'Current temperature in '
-                        f'{location} is {temperature}{unit}'
-                    )
-                else:
-                    return
-            else:
-                return
+        # Check if the expected keys are present in the response
+        if 'location' in api_response and 'current' in api_response:
+            location = api_response['location'].get('name')
+            temperature = api_response['current'].get('temperature')
         else:
-            return
+            raise ValueError("API response is missing.")
+
+        if self.__params['units'] == 's':
+            unit = 'K'
+        else:
+            unit = '℃' if self.__params['units'] == 'm' else '℉'
+
+        if location is None or temperature is None:
+            raise ValueError(
+                "Location or temperature data is missing.")
+
+        return (
+            'Current temperature in '
+            f'{location} is {temperature}{unit}'
+        )
