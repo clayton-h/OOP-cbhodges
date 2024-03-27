@@ -12,7 +12,7 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 
 # Access the API key
-api_key = config['DEFAULT']['WeatherAPIKey']
+api_key = config['WeatherAPIKey']
 
 
 @st.composite
