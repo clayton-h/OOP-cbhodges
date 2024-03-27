@@ -83,7 +83,7 @@ class APIHandler:
         """
         return self.__params['query']
 
-    def get_data(self) -> None:
+    def get_data(self) -> str:
         """Returns weather data for a query."""
         api_result = requests.get(
             'http://api.weatherstack.com/current', self.__params, timeout=10)
@@ -102,16 +102,13 @@ class APIHandler:
                     unit = '℃' if self.__params['units'] == 'm' else '℉'
 
                 if location and temperature is not None:
-                    print(
+                    return (
                         'Current temperature in '
                         f'{location} is {temperature}{unit}'
                     )
                 else:
-                    print('Error: Temperature or location data is missing.')
+                    return
             else:
-                print('Error: Invalid API response structure.')
+                return
         else:
-            print(
-                'Error: Failed to fetch data from the API.\n'
-                f'Status code: {api_result.status_code}'
-            )
+            return
