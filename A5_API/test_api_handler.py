@@ -1,7 +1,9 @@
 import unittest
-from api_handler import APIHandler
 import configparser
+from api_handler import APIHandler
 from hypothesis import given, settings, strategies as st
+from typing import Callable, Any
+from hypothesis.strategies import SearchStrategy
 
 # Create a ConfigParser object
 config = configparser.ConfigParser()
@@ -14,7 +16,7 @@ api_key = config['DEFAULT']['WeatherAPIKey']
 
 
 @st.composite
-def shuffled_zip_code(draw) -> str:
+def shuffled_zip_code(draw: Callable[[SearchStrategy], Any]) -> str:
     """Function to generate a shuffled zip code."""
     rand = draw(st.randoms())
     digits = [str(digit) for digit in range(1, 10)]
