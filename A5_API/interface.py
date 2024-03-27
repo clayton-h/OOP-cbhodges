@@ -1,21 +1,24 @@
 from api_handler import APIHandler
 from rich.console import Console
 from rich.prompt import Prompt
-import configparser
+# import configparser
 
-# Create a ConfigParser object
-config = configparser.ConfigParser()
+# # Create a ConfigParser object
+# config = configparser.ConfigParser()
 
-# Read the config file
-config.read('config.ini')
+# # Read the config file
+# config.read('config.ini')
 
-# Access the API key
-api_key = config['DEFAULT']['WeatherAPIKey']
+# # Print out the contents of the config object
+# print("Contents of config object:", dict(config))
+
+# # Access the API key
+# api_key = config['DEFAULT']['WeatherAPIKey']
 
 
 def main() -> None:
     console = Console()
-    handler = APIHandler(api_key)
+    handler = APIHandler('7b219966d077739bae9ffdd2640da4c9')
 
     user_query = Prompt.ask(
         "Enter your location (city name, zip code, LatLon, IP)",
