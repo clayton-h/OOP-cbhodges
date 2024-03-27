@@ -33,7 +33,8 @@ class TestAPIHandler(unittest.TestCase):
     def test_input(self) -> None:
         """Test APIHandler with known cases."""
         test_api = APIHandler('7b219966d077739bae9ffdd2640da4c9')
-        self.assertEqual(test_api.get_access_key(), '7b219966d077739bae9ffdd2640da4c9')
+        self.assertEqual(test_api.get_access_key(),
+                         '7b219966d077739bae9ffdd2640da4c9')
         test_api.set_query('Grand Junction')
         self.assertEqual(test_api.get_query(), 'Grand Junction')
         test_api.set_unit('m')
