@@ -90,13 +90,15 @@ class APIHandler:
 
         if api_result.status_code == 200:
             api_response = api_result.json()
+        else:
+            raise ValueError("API response is missing.")
 
         # Check if the expected keys are present in the response
         if 'location' in api_response and 'current' in api_response:
             location = api_response['location'].get('name')
             temperature = api_response['current'].get('temperature')
         else:
-            raise ValueError("API response is missing.")
+            raise ValueError("API response keys not found.")
 
         if self.__params['units'] == 's':
             unit = 'K'
