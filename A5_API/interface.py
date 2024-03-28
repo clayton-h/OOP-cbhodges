@@ -1,4 +1,4 @@
-from api_handler import APIHandler
+from A5_API.api_handler import APIHandler
 from rich.console import Console
 from rich.prompt import Prompt
 
