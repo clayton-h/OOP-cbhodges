@@ -1,4 +1,6 @@
-import requests
+import urllib.parse
+import urllib.request
+import json
 
 
 class Phony:
@@ -85,13 +87,13 @@ class APIHandler:
 
     def get_data(self) -> str:
         """Returns weather data for a query."""
-        api_result = requests.get(
-            'http://api.weatherstack.com/current', self.__params, timeout=10)
-
-        if api_result.status_code == 200:
-            api_response = api_result.json()
-        else:
-            raise ValueError("API response is missing.")
+        url = 'http://api.weatherstack.com/current?' + \
+            urllib.parse.urlencode(self.__params)
+        with urllib.request.urlopen(url, timeout=10) as response:
+            if response.status == 200:
+                api_response = json.loads(response.read().decode())
+            else:
+                raise ValueError("API response is missing.")
 
         # Check if the expected keys are present in the response
         if 'location' in api_response and 'current' in api_response:
