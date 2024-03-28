@@ -7,13 +7,13 @@ Object-Oriented Programming Repo Spring 2024
 
 | Category: | Value: |
 | --- | --- |
-| Name: | OOP – Object Serialization and JSON |
+| Name: | OOP – Object Serialization and JSO |
 | Description: | Weather APP - JSON API |
 | Due Date: | 3/30/24 |
-| Status: | Complete |
-| Location: | (https://github.com/clayton-h/OOP-cbhodges/tree/main/A5_API) |
-| Self Grade: | 100/100 |
-| Notes: | All tasks completed as outlined in the Word document |
+| Status: | ~ |
+| Location: | (~) |
+| Self Grade: | ~/100 |
+| Notes: | All tasks ~ as outlined in the Word document |
 
 ### Assignment #4
 
