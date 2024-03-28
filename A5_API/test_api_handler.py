@@ -29,8 +29,8 @@ class TestAPIHandler(unittest.TestCase):
         self.assertEqual(test_api.get_query(), 'Grand Junction')
         test_api.set_unit('m')
         self.assertEqual(test_api.get_unit(), 'm')
-        # data = test_api.get_data()
-        # self.assertTrue(data)
+        data = test_api.get_data()
+        self.assertTrue(data)
 
     @given(zip_rand)
     @settings(max_examples=1, deadline=500)
@@ -40,8 +40,8 @@ class TestAPIHandler(unittest.TestCase):
         test_api = APIHandler('7b219966d077739bae9ffdd2640da4c9')
         test_api.set_query(s)
         test_api.set_unit('f')
-        # data = test_api.get_data()
-        # self.assertTrue(data)
+        data = test_api.get_data()
+        self.assertTrue(data)
 
 
 if __name__ == "__main__":
