@@ -1,5 +1,5 @@
 import unittest
-from api_handler import APIHandler
+from A5_API.api_handler import APIHandler
 from hypothesis import given, settings, strategies as st
 from typing import Callable, Any
 from hypothesis.strategies import SearchStrategy
