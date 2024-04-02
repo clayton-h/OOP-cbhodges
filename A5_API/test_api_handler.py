@@ -1,3 +1,11 @@
+#
+# Python script that tests
+# API requests for a
+# weather app
+#
+# By: Clayton H.
+#
+
 import unittest
 from A5_API.api_handler import APIHandler
 from hypothesis import given, settings, strategies as st

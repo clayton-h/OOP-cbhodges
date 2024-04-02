@@ -1,3 +1,11 @@
+#
+# Python script that passes
+# manages API requests for
+# a weather app
+#
+# By: Clayton H.
+#
+
 import urllib.parse
 import urllib.request
 import json
