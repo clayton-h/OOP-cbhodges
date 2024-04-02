@@ -13,5 +13,14 @@ class calculate:
         self.__range = 0
         self.__data = data
 
-    def print(self) -> None:
-        print("Case: ", self.__min, " ", self.__max, " ", self.__range)
+    def print(self, data: list[int]) -> None:
+        print("Case", f"{data[0]}:", self.__min, self.__max, self.__range)
+
+    def min_calc(self, data: list[int]) -> None:
+        print(self.__min)
+
+    def max_calc(self, data: list[int]) -> None:
+        print(self.__max)
+
+    def min_range(self, data: list[int]) -> None:
+        print(self.__range)

@@ -8,16 +8,19 @@
 
 from calculate import calculate as calc
 
-counter = 0
-
 
 def main() -> None:
     data = []
-    for _ in range(10):
-        data.append(input().split())
+    for _ in range(1, 10):
+        line = input().split()
+        if not line:
+            break
+        data.append(_)
+        data.append(line)
 
     calculator = calc(data)
-    calculator.print()
+    for line in data[::2]:
+        calculator.print(data)
 
 
 if __name__ == "__main__":
