@@ -3,6 +3,19 @@ Object-Oriented Programming Repo Spring 2024
 
 ## Assignments:
 
+### Assignment #6
+
+| Category: | Value: |
+| --- | --- |
+| Name: | A6 - Inheritance |
+| Description: | OOD and Inheritance |
+| Due Date: | 4/15/24 |
+| Status: | ~ |
+| Location: | (~) |
+| Self Grade: | ~/100 |
+| Notes: | All tasks ~ as outlined in the Word document |
+
+
 ### Assignment #5
 
 | Category: | Value: |
@@ -10,10 +23,10 @@ Object-Oriented Programming Repo Spring 2024
 | Name: | OOP – Object Serialization and JSO |
 | Description: | Weather APP - JSON API |
 | Due Date: | 3/30/24 |
-| Status: | ~ |
-| Location: | (~) |
-| Self Grade: | ~/100 |
-| Notes: | All tasks ~ as outlined in the Word document |
+| Status: | Complete |
+| Location: | (https://github.com/clayton-h/OOP-cbhodges/tree/main/A5_API) |
+| Self Grade: | 100/100 |
+| Notes: | All tasks completed as outlined in the Word document |
 
 ### Assignment #4
 
