@@ -6,7 +6,7 @@
 # By: Clayton H.
 #
 
-from calculate import calculate as calc
+from A6_inheritance.statistics.calculate import Calculate as calc
 
 
 def main() -> None:
@@ -27,8 +27,8 @@ def main() -> None:
         pass  # End of input
 
     if data:
-        for case_number, data in enumerate(data, start=1):
-            calculator = calc(data)
+        for case_number, case_data in enumerate(data, start=1):
+            calculator = calc([case_data])  # Wrap case_data in another list
             print(f"Case {case_number}: ", end='')
             calculator.print_stats()
     else:

@@ -6,29 +6,55 @@
 # By: Clayton H.
 #
 
-class calculate:
-    def __init__(self, data: list[int]) -> None:
-        self.__data = data
-        self.__min = min(data)
-        self.__max = max(data)
-        self.__range = self.__max - self.__min
+class Calculate(list[list[int]]):
+    """Calculate class takes a list of
+    lists of integers as input and
+    calculates the minimum, maximum, and
+    range of the datasets provided.
+    """
 
-    def get_min(self) -> int:
+    def __init__(self, data: list[list[int]]) -> None:
+        """Initialize the Calculate object with the provided data.
+
+        Args:
+            data: A list of lists of integers.
+        """
+        if data and all(data):
+            self.__min = min(min(sublist) for sublist in data)
+            self.__max = max(max(sublist) for sublist in data)
+            self.__range = self.__max - self.__min
+        else:
+            self.__min = 0
+            self.__max = 0
+            self.__range = 0
+
+    @property
+    def min(self) -> int:
+        """Min getter
+
+        Returns:
+            The minimum value among all sublists.
+        """
         return self.__min
 
-    def set_min(self, new_min: int) -> None:
-        self.__min = new_min
-        self.__range = self.__max - self.__min
+    @property
+    def max(self) -> int:
+        """Max getter
 
-    def get_max(self) -> int:
+        Returns:
+            The maximum value among all sublists.
+        """
         return self.__max
 
-    def set_max(self, new_max: int) -> None:
-        self.__max = new_max
-        self.__range = self.__max - self.__min
+    @property
+    def range(self) -> int:
+        """Range getter
 
-    def get_range(self) -> int:
+        Returns:
+            The range (difference between max and min) among all sublists.
+        """
         return self.__range
 
     def print_stats(self) -> None:
-        print(self.get_min(),  self.get_max(), self.get_range())
+        """Function to print minimum, maximum, and range."""
+        print(self.__min, self.__max, self.__range)
