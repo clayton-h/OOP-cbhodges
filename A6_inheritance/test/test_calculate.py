@@ -13,7 +13,7 @@ from A6_inheritance.statistics.calculate import Calculate as calc
 
 
 class TestCalculate(unittest.TestCase):
-
+    """Test """
     @given(st.lists(st.lists(st.integers(min_value=1, max_value=100),
                              min_size=2), min_size=2))
     def test_min(self, data: list[list[int]]) -> None:
@@ -30,16 +30,11 @@ class TestCalculate(unittest.TestCase):
         result: int = calc(data).max
         self.assertEqual(result, expected_max, "largest value")
 
-    @given(st.lists(st.lists(st.integers(min_value=1, max_value=100),
-                             min_size=2), min_size=1))
-    def test_range(self, data: list[list[int]]) -> None:
+    @given(st.lists(st.integers(min_value=1, max_value=100), min_size=2))
+    def test_range(self, data: list[int]) -> None:
         """Test range (max - min)"""
-        if len(data) < 2 or any(len(sublist) < 2 for sublist in data):
-            self.skipTest("Data has too few elements to calculate a range")
-        expected_range: int = max(
-            max(sublist) for sublist in data)
-        - min(min(sublist) for sublist in data)
-        result: int = calc(data).range
+        expected_range: int = max(data) - min(data)
+        result: int = calc([data]).range
         self.assertEqual(result, expected_range, "difference b/w max and min")
 
     def test_empty_list(self) -> None:
@@ -50,6 +45,13 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(result.max, 0)
         self.assertEqual(result.range, 0)
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_setters(self) -> None:
+        """Test the setters"""
+        data: list[list[int]] = [[]]
+        obj = calc(data)
+        obj.min = 1
+        obj.max = 2
+        obj.range = 3
+        self.assertEqual(obj.min, 1)
+        self.assertEqual(obj.max, 2)
+        self.assertEqual(obj.range, 3)
