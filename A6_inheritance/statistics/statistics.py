@@ -6,7 +6,7 @@
 # By: Clayton H.
 #
 
-from A6_inheritance.statistics.calculate import Calculate as calc
+from .calculate import Calculate as calc
 
 
 def main() -> None:
@@ -14,25 +14,10 @@ def main() -> None:
     and calls a print method that displays
     the minimum, maximum, and range of values.
     """
-    data = []
-    try:
-        while True:
-            line = input()
-            if not line.strip():
-                break
-            # Skip the first integer, which represents the number of elements
-            case_data = [int(x) for x in line.split()][1:]
-            data.append(case_data)
-    except EOFError:
-        pass  # End of input
-
-    if data:
-        for case_number, case_data in enumerate(data, start=1):
-            calculator = calc([case_data])  # Wrap case_data in another list
-            print(f"Case {case_number}: ", end='')
-            print(calculator.print_stats())
-    else:
-        print("No data entered.")
+    data = calc.get_data()
+    calculator = calc(data)
+    stats = calculator.print_stats()
+    print(stats)
 
 
 if __name__ == "__main__":

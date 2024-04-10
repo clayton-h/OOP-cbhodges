@@ -23,6 +23,7 @@ class Calculate(list[list[int]]):
             self.__min = min(min(sublist) for sublist in data)
             self.__max = max(max(sublist) for sublist in data)
             self.__range = self.__max - self.__min
+            self.data = data
         else:
             self.__min = 0
             self.__max = 0
@@ -76,3 +77,20 @@ class Calculate(list[list[int]]):
     def print_stats(self) -> tuple[int, int, int]:
         """Function to print minimum, maximum, and range."""
         return self.__min, self.__max, self.__range
+
+    @staticmethod
+    def get_data() -> list[list[int]]:
+        data = []
+        try:
+            while True:
+                line = input()
+                if not line.strip():
+                    break
+                # Skip the first integer,
+                # which represents the number of elements
+                case_data = [int(x) for x in line.split()][1:]
+                data.append(case_data)
+        except EOFError:
+            pass  # End of input
+
+        return data

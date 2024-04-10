@@ -8,6 +8,7 @@
 #
 
 import unittest
+from unittest.mock import patch
 from hypothesis import given, strategies as st
 from A6_inheritance.statistics.calculate import Calculate as calc
 
@@ -45,8 +46,9 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(result.max, 0)
         self.assertEqual(result.range, 0)
 
-    def test_setters(self) -> None:
-        """Test the setters"""
+    def test_misc(self) -> None:
+        """Test miscellaneous items, including
+        setters, print functionality, and user input"""
         data: list[list[int]] = [[]]
         obj = calc(data)
         obj.min = 1
@@ -56,3 +58,6 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(obj.max, 2)
         self.assertEqual(obj.range, 3)
         self.assertEqual(obj.print_stats(), (1, 2, 3))
+
+        with patch.object(calc, 'get_data', return_value=[[1, 2, 3]]):
+            self.assertEqual(obj.get_data(), [[1, 2, 3]])
