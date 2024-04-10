@@ -37,6 +37,12 @@ class Calculate(list[list[int]]):
         """
         return self.__min
 
+    @min.setter
+    def min(self, min: int) -> None:
+        """Minimum setter
+        """
+        self.__min = min
+
     @property
     def max(self) -> int:
         """Max getter
@@ -46,6 +52,12 @@ class Calculate(list[list[int]]):
         """
         return self.__max
 
+    @max.setter
+    def max(self, max: int) -> None:
+        """Maximum setter
+        """
+        self.__max = max
+
     @property
     def range(self) -> int:
         """Range getter
@@ -54,6 +66,12 @@ class Calculate(list[list[int]]):
             The range (difference between max and min) among all sublists.
         """
         return self.__range
+
+    @range.setter
+    def range(self, range: int) -> None:
+        """Range setter
+        """
+        self.__range = range
 
     def print_stats(self) -> None:
         """Function to print minimum, maximum, and range."""
