@@ -30,7 +30,7 @@ def main() -> None:
         for case_number, case_data in enumerate(data, start=1):
             calculator = calc([case_data])  # Wrap case_data in another list
             print(f"Case {case_number}: ", end='')
-            calculator.print_stats()
+            print(calculator.print_stats())
     else:
         print("No data entered.")
 

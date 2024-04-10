@@ -73,6 +73,6 @@ class Calculate(list[list[int]]):
         """
         self.__range = range
 
-    def print_stats(self) -> None:
+    def print_stats(self) -> tuple[int, int, int]:
         """Function to print minimum, maximum, and range."""
-        print(self.__min, self.__max, self.__range)
+        return self.__min, self.__max, self.__range
