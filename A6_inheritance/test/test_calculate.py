@@ -55,3 +55,4 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(obj.min, 1)
         self.assertEqual(obj.max, 2)
         self.assertEqual(obj.range, 3)
+        self.assertIsNotNone(obj.print_stats)
