@@ -10,7 +10,7 @@
 import unittest
 from unittest.mock import patch
 from hypothesis import given, strategies as st
-from A6_inheritance.statistics.calculate import Calculate as calc
+from .calculate import Calculate as calc
 
 
 class TestCalculate(unittest.TestCase):
@@ -59,7 +59,7 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(obj.range, 3)
         self.assertEqual(obj.print_stats(), (1, 2, 3))
 
-    def test_get_data_with_break(self) -> None:
+    def test_get_data(self) -> None:
         user_input = [
             '3 1 2 3',
             '3 4 5 6',

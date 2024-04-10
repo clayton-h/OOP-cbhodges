@@ -50,7 +50,3 @@ class TestAPIHandler(unittest.TestCase):
         test_api.set_unit('f')
         data = test_api.get_data()
         self.assertTrue(data)
-
-
-if __name__ == "__main__":
-    unittest.main()
