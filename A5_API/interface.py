@@ -1,3 +1,11 @@
+#
+# Python script that tests
+# utilizes user input for
+# weather app demonstration
+#
+# By: Clayton H.
+#
+
 from A5_API.api_handler import APIHandler
 from rich.console import Console
 from rich.prompt import Prompt
