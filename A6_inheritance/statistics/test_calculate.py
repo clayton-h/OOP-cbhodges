@@ -59,5 +59,16 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(obj.range, 3)
         self.assertEqual(obj.print_stats(), (1, 2, 3))
 
-        with patch.object(calc, 'get_data', return_value=[[1, 2, 3]]):
-            self.assertEqual(obj.get_data(), [[1, 2, 3]])
+    def test_get_data_with_break(self) -> None:
+        user_input = [
+            '3 1 2 3',
+            '3 4 5 6',
+            ''
+        ]
+        expected_output = [
+            [1, 2, 3],
+            [4, 5, 6]
+        ]
+        with patch('builtins.input', side_effect=user_input):
+            result = calc.get_data()
+            self.assertEqual(result, expected_output)

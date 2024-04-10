@@ -81,16 +81,13 @@ class Calculate(list[list[int]]):
     @staticmethod
     def get_data() -> list[list[int]]:
         data = []
-        try:
-            while True:
-                line = input()
-                if not line.strip():
-                    break
-                # Skip the first integer,
-                # which represents the number of elements
-                case_data = [int(x) for x in line.split()][1:]
-                data.append(case_data)
-        except EOFError:
-            pass  # End of input
+        while True:
+            line = input()
+            if not line.strip():
+                break
+            # Skip the first integer,
+            # which represents the number of elements
+            case_data = [int(x) for x in line.split()][1:]
+            data.append(case_data)
 
         return data

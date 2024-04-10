@@ -14,7 +14,6 @@ all: style-check type-check run-test clean
 .PHONY: generate-html
 generate-html:
 	$(GENERATE_HTML)
-
 .PHONY: generate-uml
 generate-uml:
 	$(GENERATE_UML)
