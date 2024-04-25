@@ -35,6 +35,7 @@ class Backend(Kattis, MutableSequence[Tuple[int, str]]):
         self._input_data = input_data if input_data is not None else []
         self._sorted_data: List[Tuple[int, str]] = []
 
+    # For the Backend class, check the input handling:
     def read_input(self) -> None:
         num_pairs = int(input(""))
         for _ in range(num_pairs):
@@ -42,7 +43,7 @@ class Backend(Kattis, MutableSequence[Tuple[int, str]]):
             if len(line) != 2:
                 continue
             if line[0].isdigit() and line[1].isalpha():
-                value = int(line[0]) // 2
+                value = int(line[0])
                 color = line[1]
                 self.append((value, color))
             elif line[0].isalpha() and line[1].isdigit():

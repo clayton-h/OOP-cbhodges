@@ -7,7 +7,7 @@
 #
 
 
-from backend import Backend
+from .backend import Backend
 
 
 def main() -> None:
