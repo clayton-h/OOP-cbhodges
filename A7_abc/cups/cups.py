@@ -11,6 +11,10 @@ from .backend import Backend
 
 
 def main() -> None:
+    """Main driver creates a backend object
+    and calls read_input, solve, and
+    print_answer methods.
+    """
     backend = Backend()
     backend.read_input()
     backend.solve()
