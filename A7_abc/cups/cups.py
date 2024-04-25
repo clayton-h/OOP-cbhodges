@@ -7,12 +7,14 @@
 #
 
 
-from A7_abc.cups.backend import Backend  #
+from backend import Backend
 
 
 def main() -> None:
-    values = Backend()
-    values.sorting()
+    backend = Backend()
+    backend.read_input()
+    backend.solve()
+    backend.print_answer()
 
 
 if __name__ == "__main__":

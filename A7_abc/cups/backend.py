@@ -6,53 +6,106 @@
 # By: Clayton H.
 #
 
-from typing import Optional, List, Tuple
+from __future__ import annotations
+from abc import ABC, abstractmethod
+from typing import List, Tuple, Optional, \
+    MutableSequence, Union, Iterable, overload
 
 
-class Backend():
-    def __init__(self, input_data: Optional[List[Tuple[int, str]]] = None,
-                 sorted_data: Optional[List[Tuple[int, str]]] = None) -> None:
-        self.__input_data = input_data if input_data is not None else []
-        self.__sorted_data = sorted_data if sorted_data is not None else []
+class Kattis(ABC):
+    @abstractmethod
+    def read_input(self) -> None:
+        """Method to read and parse input data."""
+        pass
 
-    @property
-    def input_data(self) -> List[Tuple[int, str]]:
-        return self.__input_data
+    @abstractmethod
+    def solve(self) -> None:
+        """Method to process (solve) the main logic."""
+        pass
 
-    @input_data.setter
-    def input_data(self, input_data: List[Tuple[int, str]]) -> None:
-        self.__input_data = input_data
+    @abstractmethod
+    def print_answer(self) -> None:
+        """Method to print the final answers."""
+        pass
 
-    @property
-    def sorted_data(self) -> List[Tuple[int, str]]:
-        return self.__sorted_data
 
-    @sorted_data.setter
-    def sorted_data(self, sorted_data: List[Tuple[int, str]]) -> None:
-        self.__sorted_data = sorted_data
+class Backend(Kattis, MutableSequence[Tuple[int, str]]):
+    def __init__(
+            self, input_data: Optional[List[Tuple[int, str]]] = None) -> None:
+        self._input_data = input_data if input_data is not None else []
+        self._sorted_data: List[Tuple[int, str]] = []
 
-    def sorting(self) -> None:
+    def read_input(self) -> None:
         num_pairs = int(input(""))
         for _ in range(num_pairs):
             line = input("").split()
             if len(line) != 2:
                 continue
-            if line[0].isdigit() and line[1].isalpha():  # diameter, color
+            if line[0].isdigit() and line[1].isalpha():
                 value = int(line[0]) // 2
                 color = line[1]
-                # append as (radius, color)
-                self.__input_data.append((value, color))
-            elif line[0].isalpha() and line[1].isdigit():  # color, radius
+                self.append((value, color))
+            elif line[0].isalpha() and line[1].isdigit():
                 value = int(line[1])
                 color = line[0]
-                # append as (radius, color)
-                self.__input_data.append((value, color))
+                self.append((value, color))
             else:
                 continue
 
-        # Sorting by radius
-        self.__sorted_data = sorted(self.__input_data, key=lambda x: x[0])
+    def solve(self) -> None:
+        self._sorted_data = sorted(self._input_data, key=lambda x: x[0])
 
-        # Output the sorted colors
-        for radius, color in self.__sorted_data:
+    def print_answer(self) -> None:
+        for _, color in self._sorted_data:
             print(color)
+
+    # MutableSequence methods
+    def __len__(self) -> int:
+        return len(self._input_data)
+
+    @overload
+    def __getitem__(self, index: int) -> Tuple[int, str]: ...
+
+    @overload
+    def __getitem__(
+        self, index: slice) -> MutableSequence[Tuple[int, str]]: ...
+
+    def __getitem__(self, index: Union[int, slice]) -> \
+            Union[Tuple[int, str], MutableSequence[Tuple[int, str]]]:
+        result = self._input_data[index]
+        if isinstance(index, slice):
+            return result
+        return result
+
+    @overload
+    def __setitem__(self, index: int, value: Tuple[int, str]) -> None: ...
+
+    @overload
+    def __setitem__(self, index: slice,
+                    value: Iterable[Tuple[int, str]]) -> None: ...
+
+    def __setitem__(self, index: Union[int, slice],
+                    value: Union[Tuple[int, str],
+                                 Iterable[Tuple[int, str]]]) -> None:
+        if isinstance(index, int):
+            if not isinstance(value, tuple):
+                raise TypeError(
+                    "Expected a tuple for integer index assignment")
+            self._input_data[index] = value
+        elif isinstance(index, slice):
+            if isinstance(value, Iterable) and not isinstance(value, tuple):
+                self._input_data[index] = list(value)
+            else:
+                raise TypeError(
+                    "Expected an iterable of tuples for slice assignment")
+        else:
+            raise IndexError("Invalid index type")
+
+    def __delitem__(self, index: Union[int, slice]) -> None:
+        if isinstance(index, slice) or isinstance(index, int):
+            del self._input_data[index]
+        else:
+            raise TypeError("Index must be int or slice")
+
+    def insert(self, index: int, value: Tuple[int, str]) -> None:
+        self._input_data.insert(index, value)
