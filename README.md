@@ -10,10 +10,10 @@ Object-Oriented Programming Repo Spring 2024
 | Name: | A7 - ABC & Overloading |
 | Description: | Abstract Base Class and Operator Overloading |
 | Due Date: | 5/10/24 |
-| Status: | ~ |
-| Location: | (~) |
-| Self Grade: | ~/100 |
-| Notes: | All tasks ~ as outlined in the Word document |
+| Status: | Complete |
+| Location: | (https://github.com/clayton-h/OOP-cbhodges/tree/main/A7_abc) |
+| Self Grade: | 100/100 |
+| Notes: | All tasks completed as outlined in the Word document |
 
 ### Assignment #6
 
